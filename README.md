@@ -81,16 +81,16 @@ Crear archivo para ejemplo `nano input/mi_script.php`
 
 Ofuscar todo lo que se encuentra en el directorio input y sacar el resultado por output
 
-- `docker run` : Inicia un nuevo contenedor de Docker.
-- `--rm` : El contenedor se eliminará automáticamente después de que termine su ejecución. Esto ayuda a mantener tu sistema limpio de contenedores que ya no necesitas.
-- `-v $(pwd)/input:/workspace/input` : Monta el directorio `input` del host en el contenedor en el directorio `/workspace/input`. Esto permite que el contenedor acceda a los archivos en el directorio `input` de tu máquina local.
-- `-v $(pwd)/output:/workspace/output/yakpro-po/obfuscated` : Monta el directorio `output` del host en el contenedor en `/workspace/output/yakpro-po/obfuscated`. Este es el directorio donde se guardarán los archivos obfuscados generados por `yakpro-po`.
-- `-w /workspace/input` : Establece el directorio de trabajo dentro del contenedor como `/workspace/input`. Esto significa que cualquier comando ejecutado en el contenedor usará `/workspace/input` como su directorio de trabajo actual.
-- `yakpro-po` : Es la imagen de Docker que has creado y que contiene el comando `yakpro-po`.
-- `yakpro-po /workspace/input -o /workspace/output` : Es el comando que se ejecutará dentro del contenedor:
-    - `yakpro-po` es el ejecutable que obfusca el código.
-    - `/workspace/input` es el directorio de entrada que contiene los archivos PHP que deseas obfuscar.
-    - `-o /workspace/output` indica el directorio de salida donde se guardarán los archivos obfuscados. El contenedor utilizará este directorio para guardar el resultado de la obfuscación.
+    - `docker run` : Inicia un nuevo contenedor de Docker.
+    - `--rm` : El contenedor se eliminará automáticamente después de que termine su ejecución. Esto ayuda a mantener tu sistema limpio de contenedores que ya no necesitas.
+    - `-v $(pwd)/input:/workspace/input` : Monta el directorio `input` del host en el contenedor en el directorio `/workspace/input`. Esto permite que el contenedor acceda a los archivos en el directorio `input` de tu máquina local.
+    - `-v $(pwd)/output:/workspace/output/yakpro-po/obfuscated` : Monta el directorio `output` del host en el contenedor en `/workspace/output/yakpro-po/obfuscated`. Este es el directorio donde se guardarán los archivos obfuscados generados por `yakpro-po`.
+    - `-w /workspace/input` : Establece el directorio de trabajo dentro del contenedor como `/workspace/input`. Esto significa que cualquier comando ejecutado en el contenedor usará `/workspace/input` como su directorio de trabajo actual.
+    - `yakpro-po` : Es la imagen de Docker que has creado y que contiene el comando `yakpro-po`.
+    - `yakpro-po /workspace/input -o /workspace/output` : Es el comando que se ejecutará dentro del contenedor:
+        - `yakpro-po` es el ejecutable que obfusca el código.
+        - `/workspace/input` es el directorio de entrada que contiene los archivos PHP que deseas obfuscar.
+        - `-o /workspace/output` indica el directorio de salida donde se guardarán los archivos obfuscados. El contenedor utilizará este directorio para guardar el resultado de la obfuscación.
 
     docker run --rm -v $(pwd)/input:/workspace/input -v $(pwd)/output:/workspace/output/yakpro-po/obfuscated -w /workspace/input yakpro-po yakpro-po /workspace/input -o /workspace/output
 
