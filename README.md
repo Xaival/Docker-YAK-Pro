@@ -1,10 +1,10 @@
-# Descripcion
+# Descripción
 Modifica el código para que sea más difícil de entender, reduciendo el riesgo de que un atacante pueda analizarlo y encontrar vulnerabilidades.
 [YAK Pro - Php Obfuscator](https://www.php-obfuscator.com/?lang=english)
 
 
-# Paso a paso de instalacion
-Preparacion previa
+# Paso a paso de instalación
+Preparación previa
 ```bash
     mkdir YAK-Pro YAK-Pro/input YAK-Pro/output
     cd YAK-Pro
@@ -90,8 +90,8 @@ Ofuscar todo lo que se encuentra en el directorio input y sacar el resultado por
 - `yakpro-po` : Es la imagen de Docker que has creado y que contiene el comando `yakpro-po`.
 - `yakpro-po /workspace/input -o /workspace/output` : Es el comando que se ejecutará dentro del contenedor:
     - `yakpro-po` es el ejecutable que obfusca el código.
-    - `/workspace/input` es el directorio de entrada que contiene los archivos PHP que deseas obfuscar.
-    - `-o /workspace/output` indica el directorio de salida donde se guardarán los archivos obfuscados. El contenedor utilizará este directorio para guardar el resultado de la obfuscación.
+    - `/workspace/input` es el directorio de entrada que contiene los archivos PHP que deseas ofuscar.
+    - `-o /workspace/output` indica el directorio de salida donde se guardarán los archivos ofuscados. El contenedor utilizará este directorio para guardar el resultado de la ofuscación.
 ```bash
     docker run --rm -v $(pwd)/input:/workspace/input -v $(pwd)/output:/workspace/output/yakpro-po/obfuscated -w /workspace/input yakpro-po yakpro-po /workspace/input -o /workspace/output
 ```
@@ -106,5 +106,5 @@ Ver imágenes de Docker para saber el nombre `docker images`
 ![image](https://github.com/user-attachments/assets/6e02a5cd-8418-44d4-b67c-108aa8a2c19d)
 
 
-Borrar imagen danto por echo que ya se han ofuscado todos los que se querian `docker rmi yakpro-po`
+Borrar imagen danto por hecho que ya se han ofuscado todos los que se querian `docker rmi yakpro-po`
 ![image](https://github.com/user-attachments/assets/0bb571a3-3b4a-4cb1-8317-ab1a9e3fdf09)
