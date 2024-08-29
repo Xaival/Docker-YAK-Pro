@@ -5,16 +5,16 @@ Modifica el código para que sea más difícil de entender, reduciendo el riesgo
 
 # Paso a paso de instalacion
 Preparacion previa
-
+```bash
     mkdir YAK-Pro YAK-Pro/input YAK-Pro/output
     cd YAK-Pro
     nano Dockerfile
-
+```
 ![image](https://github.com/user-attachments/assets/dddad212-be41-4ceb-8c96-2cbe23e49afd)
 
 
 Configurar el archivo de creación de imagen Dockerfile
-
+```bash
     # Usamos la imagen base de Ubuntu
     FROM ubuntu:20.04
     
@@ -52,7 +52,7 @@ Configurar el archivo de creación de imagen Dockerfile
     
     # Comando por defecto al iniciar el contenedor
     CMD ["yakpro-po", "--help"]
-
+```
 ![image](https://github.com/user-attachments/assets/c9fed9c4-8b94-4cb3-8aa9-234cf6fd3472)
 
 
@@ -62,7 +62,7 @@ Construye la imagen de Docker con el siguiente comando `docker build -t yakpro-p
 
 
 Crear archivo para ejemplo `nano input/mi_script.php`
-
+```php
     <?php
     // Obtener el valor desde la URL
     $input = $_GET['input'];
@@ -75,6 +75,7 @@ Crear archivo para ejemplo `nano input/mi_script.php`
         // Mostrar un mensaje de error
         echo "Error: Entrada no válida.";
     }
+```
 
 ![image](https://github.com/user-attachments/assets/a94b879a-4e88-4274-bfcc-012e8192580b)
 
