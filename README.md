@@ -53,6 +53,6 @@ Configurar el archivo de creación de imagen Dockerfile
 ![image](https://github.com/user-attachments/assets/c9fed9c4-8b94-4cb3-8aa9-234cf6fd3472)
 
 
-Construye la imagen de Docker con el siguiente comando 'docker build -t yakpro-po .'
+Construye la imagen de Docker con el siguiente comando ´´docker build -t yakpro-po .´´
 ![image](https://github.com/user-attachments/assets/e8e7679b-f5ed-4364-99cc-f760a501d232)
 
